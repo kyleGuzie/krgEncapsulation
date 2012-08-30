@@ -1,4 +1,4 @@
-package lab1;
+package lab1_Done;
 
 import java.util.Date;
 
@@ -12,19 +12,89 @@ import java.util.Date;
  * @version     1.01
  */
 public class Employee {
-    String firstName;
-    String lastName;
-    public String ssn;
-    public Date birthDate;
-    boolean metWithHr;//noval for booleans
-    boolean metDeptStaff;
-    boolean reviewedDeptPolicies;
-    boolean movedIn;
-    String cubeId;
 
-    public Employee() {
+    public String getFirstName() {
+        return firstName;
+    }
+
+    private void setFirstName(String firstName) {
+        if(firstName == null || firstName.length() == 0){
+            throw new IllegalArgumentException();
+        }
+        
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    private void setLastName(String lastName) {
+        
+        if(lastName == null || lastName.length()== 0){
+            throw new IllegalArgumentException();
+        }
+        this.lastName = lastName;
+    }
+
+    public String getSsn() {
+        return ssn;
+    }
+
+    private void setSsn(String ssn) {
+        
+        if(ssn == null || ssn.length() == 0){
+            throw new IllegalArgumentException();
+        }
+        this.ssn = ssn;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        //insert validation code
+        this.birthDate = birthDate;
+    }
+
+    public String getCubeId() {
+        return cubeId;
+    }
+
+    public void setCubeId(String cubeId) {
+        //insert validation 
+        this.cubeId = cubeId;
+    }
+    private String firstName;
+    private String lastName;
+    private String ssn;
+    private Date birthDate;
+    private boolean metWithHr;//noval for booleans
+    private boolean metDeptStaff;
+    private boolean reviewedDeptPolicies;
+    private boolean movedIn;
+    private String cubeId;
+
+    public Employee(String fname, String lname, String ssn) {
+        setFirstName(fname);
+        setLastName(lname);
+        setSsn(ssn);
+        
 
     }
+    
+    public void FirstOrientation(String cubeId){
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubicle(cubeId);
+        getStatus();
+        
+        
+        
+    }
+    
 
     // Assume this must be performed first
     public void meetWithHrForBenefitAndSalryInfo() {
