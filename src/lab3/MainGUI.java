@@ -19,6 +19,7 @@ import javax.swing.*;
  * @author      Jim Lombardo, WCTC Instructor
  * @version     1.00
 */
+ private Inventory e;
 public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private final int MAX_RECS = 10;
     private final int NOT_FOUND = -1;
@@ -27,6 +28,7 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     int foundIndex = NOT_FOUND;
     private String partDesc;
     double partPrice;
+    private Inventory;
 
     String[] partNums = new String[10];
     String[] partDescs = new String[10];
@@ -271,14 +273,14 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
         }
 
         if (emptyRow > 10) {
-            JOptionPane.showMessageDialog(this, 
+            JOptionPane.showMessageDialog(this,
                     "Sorry, you have reach the maximum of 10 items.\n"
                     + "No more items can be saved.", "Maximum Reached", JOptionPane.WARNING_MESSAGE);
 
-        } else if (partNo.length() == 0 || partDesc.length() == 0 
+        } else if (partNo.length() == 0 || partDesc.length() == 0
                 || this.txtNewProdPrice.getText().length() == 0)
         {
-            JOptionPane.showMessageDialog(this, 
+            JOptionPane.showMessageDialog(this,
                     "Sorry, you must complete all fields. Please try again.",
                     "Incomplete Part Entry", JOptionPane.WARNING_MESSAGE);
             this.txtNewProdNo.requestFocus();
