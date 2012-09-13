@@ -5,8 +5,10 @@
 package lab.Two.KRG;
 
 /**
+   * * ***LabTwo*****
+ * *Advanced Java
  *
- * @author bossMan
+ * @author KyleGuzikowski
  */
 public class GameBoard {
     private GameCharacter gc;
