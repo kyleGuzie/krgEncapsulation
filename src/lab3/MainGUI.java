@@ -19,7 +19,7 @@ import javax.swing.*;
  * @author      Jim Lombardo, WCTC Instructor
  * @version     1.00
 */
- private Inventory e;
+
 public class MainGUI extends javax.swing.JFrame implements ActionListener {
     private final int MAX_RECS = 10;
     private final int NOT_FOUND = -1;
@@ -28,7 +28,7 @@ public class MainGUI extends javax.swing.JFrame implements ActionListener {
     int foundIndex = NOT_FOUND;
     private String partDesc;
     double partPrice;
-    private Inventory;
+   // private Inventory;
 
     String[] partNums = new String[10];
     String[] partDescs = new String[10];
